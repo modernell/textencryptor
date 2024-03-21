@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Challenge ~ Encriptador de Texto</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="shortcut icon" href="img/favicon.ico"/>
+	</head>
+	<body>
+		<header>
+        	<a href="index.html"><img class="logoalura" src="./img/logo.svg" alt="logoalura"></a>
+        	
+    	</header>
+    	
+		<main role="main">
+			<div class="contenedor">
+				<div class="encriptador">
+					<form class="form-encriptador">
+						<div class="input-text">
+							<textarea id="texto" name="input-text-area" placeholder="Ingrese el texto aqui..." onClick="this.value=''" onChange="comprobarTextoInvalido(this)" onKeyup="comprobarTextoInvalido(this)" required autofocus></textarea>
+							<div class="input-text-info">
+								<div class="info">
+									<img src="./img/exclamacion.svg" alt="">
+									<p id="warning">Solo letras minúsculas y sin acentos</p>
+								</div>
+								<div class="input-text-btns">
+									<input id="encrypt" type="button" value="Encriptar" onclick="encriptar();"/>
+									<input id="descrypt" type="button" value="Desencriptar" onclick="desencriptar();"/>
+								</div> 
+							</div>
+						</div>
+					</form>
+
+					<div class="output-text">
+
+						<div class="output-data">
+
+							<div class="data" id="default">
+
+								<div class="output-text-img">
+									<img src="./img/encriptado.png" alt="imagen inspector Gadget">
+								</div>
+									<p id="mensaje_cab">Ningún mensaje fue encontrado</p>
+									<p id="mensaje_det">Ingresa el texto que desees encriptar o desencriptar.</p>
+							</div>
+
+							<div class="data ocultar" id="result">
+								<textarea id="output-text" name="text_out_area" disabled></textarea>
+								<button id="copiar" onclick="copiar();">Copiar</button>
+							</div>
+
+						</div>  
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer class="pie-pagina">
+	        <p>© 2024 Desarrollado con ❤️ | Oracle+AluraLatam. </p>
+	        <!--Siguientes hipervinculos a paginas externas-->
+	        <a href="https://www.linkedin.com/in/modernell/" target="_blank" rel="noopener noreferrer"><img src="./img/linkedin.png" class="footer-ico" alt="icono Linkedin"></a>
+	        <a href="https://github.com/modernell/textencryptor/" target="_blank" rel="noopener noreferrer"><img src="./img/github.png" class="footer-ico" alt="icono GitHub"></a>
+    	</footer>
+	</body>
+	<script src="./js/script.js"></script>
+</html>
